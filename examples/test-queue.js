@@ -1,4 +1,4 @@
-var Tardis = require('../app/app');
+var bh = require('../app/app');
 
 var cb = function(delta, q){
 
@@ -7,7 +7,7 @@ var cb = function(delta, q){
 
 };
 
-var queue = new Tardis.Queue(cb);
+var queue = new bh.Queue(cb);
 
 var eventDeltas = [{
 	foo: 'bar1'

@@ -1,4 +1,4 @@
-var Tardis = require('../app/app');
+var bh = require('../app/app');
 
 
 var deltas = [{
@@ -18,7 +18,7 @@ var deltas = [{
 	foo: 'dfsdfwe fsd sdf sdfsdfsdfsd'
 }];
 
-var builder = new Tardis.builder.Base64();
+var builder = new bh.builder.Base64();
 
 var prevId = null;
 for(var i = 0; i<deltas.length; i++ ){

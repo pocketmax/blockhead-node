@@ -1,4 +1,4 @@
-var Tardis = require('../app/app');
+var bh = require('../app/app');
 
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -8,13 +8,13 @@ app.use(bodyParser.json());
 
 var prevId = null;
 
-var myStore = new Tardis.store.Rest({
+var myStore = new bh.store.Rest({
 	url: 'http://localhost:3001/eventblock/'
 });
 
 var deployBlock = function(delta, req, res){
 
-	Tardis.writer(delta, prevId, function(eventId, eventBlock){
+	bh.writer(delta, prevId, function(eventId, eventBlock){
 
 		var data = {
 			eventId: eventId,

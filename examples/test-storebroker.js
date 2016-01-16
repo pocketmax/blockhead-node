@@ -1,4 +1,4 @@
-var Tardis = require('../app/app');
+var bh = require('../app/app');
 
 var events = [{
 	eventId: 1,
@@ -18,7 +18,7 @@ var events = [{
 	payload: {foo: 'bar4'}
 }];
 
-var broker = Tardis.storeBroker({
+var broker = bh.storeBroker({
 
 	// takes eventID
 	// returns event block in a cb

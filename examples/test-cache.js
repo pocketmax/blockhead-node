@@ -1,4 +1,4 @@
-var Tardis = require('../app/app');
+var bh = require('../app/app');
 
 var events = [{
 	eventId: 1,
@@ -19,7 +19,7 @@ var events = [{
 }];
 
 // client side code that's used to populate a set of non-persistent event blocks as cache
-var cache = new Tardis.Cache({
+var cache = new bh.Cache({
 	maxSize: 1000
 });
 

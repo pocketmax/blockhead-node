@@ -1,5 +1,5 @@
 var
-	Tardis = require('../app/app'),
+	bh = require('../app/app'),
 	Promise = require('promise');
 
 var stack = [{
@@ -49,14 +49,14 @@ var promiseFactory = function(prevEventId){
 
 };
 
-var builder = new Tardis.builder.Base64();
+var builder = new bh.builder.Base64();
 
 var thenCb = function(result){
 	console.log("thenCb('" + result + "')");
 	console.log(result);
 
 	builder.reader(result.eId, result.block, function(data){
-		console.log("Tardis.reader:cb('" + data + "')...");
+		console.log("bh.reader:cb('" + data + "')...");
 		console.log(data);
 		console.log('=========================');
 		promiseFactory(result.eId)

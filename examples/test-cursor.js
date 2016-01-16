@@ -1,6 +1,6 @@
 var store1;
 
-var Tardis = require('../app/app')({
+var bh = require('../app/app')({
 	store: store1,  // load balancing store config goes here
 	cache: {
 		maxSize: 100
@@ -15,7 +15,7 @@ var Tardis = require('../app/app')({
 // used to traverse event chain
 // TODO: need to flesh out how to query event chain. Going forwards, backwards, setting limits by TS or event ID, etc etc
 // true is traverse backwards. default is false
-var cursor = new Tardis.Cursor('startEventId', false, function (delta, eventId, prevEventId, eventType){
+var cursor = new bh.Cursor('startEventId', false, function (delta, eventId, prevEventId, eventType){
 
 });
 
