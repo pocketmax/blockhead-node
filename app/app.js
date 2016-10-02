@@ -1,28 +1,5 @@
-var core = {};
+module.exports = {
 
-//TODO:	cfg.maxCacheSize = 100000  figure out how to config from main app.js file
+	Store: require('./store')
 
-//core.Store = require('./store');
-
-var StoreBroker = require('./storebroker');
-core.storeBroker = new StoreBroker();
-
-// event reader related modules
-// cursors use reader
-core.reader = require('./reader');  // singleton
-// cursors use stores
-core.Cursor = require('./cursor');
-
-// event writer related modules
-core.writer = require('./writer');  // singleton. used by pop cb on queue module
-core.Queue = require('./queue');      // for writer to stack event deltas
-
-core.builder = {
-	Base64: require('./builder/base64')
 };
-
-core.store = {
-	Rest: require('./reststore')
-};
-
-module.exports = core;
